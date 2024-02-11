@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+ 
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+  box-shadow: inset 0 0 5em 1em #000;
+  background: #000;
+}
+
+.lines::before {
+  content: "";
+  top: 50%;
+  transform: translatey(-50%);
+  left: 0;
+  height: 1px;
+  background: #4c4c4c;
+  width: 100%;
+  position: absolute;
+}
+
+.lines::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translatex(-50%);
+  width: 1px;
+  background: #4c4c4c;
+  height: 100vh;
+  position: absolute;
+}
+
+.screen {
+  clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);
+  background: #fff;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);
+  }
+  12.5% {
+    clip-path: polygon(50% 50%, 100% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);
+  }
+  37.5% {
+    clip-path: polygon(
+      50% 50%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      0 100%,
+      0 0,
+      50% 0
+    );
+  }
+  62.5% {
+    clip-path: polygon(50% 50%, 0 100%, 0 100%, 0 100%, 0 100%, 0 0, 50% 0);
+  }
+  87.5% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0, 50% 0);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0);
+  }
+}
+
+.lines {
+  /* box-shadow: inset 0 0 5em 1em #000; */
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+}
+
+.number {
+  font-size: 10rem;
+  position: relative;
+  font-family: var(--fontFamily2);
+}
+
+/* .number::after, */
+.number::before {
+  content: "";
+  border: #fff solid 1px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.number::before {
+  width: 380px;
+  height: 380px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number::after {
+  width: 400px;
+  height: 400px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

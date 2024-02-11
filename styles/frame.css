@@ -1,0 +1,190 @@
+
+:root {
+    --main-pad1: 1.5rem;
+    --main-pad2: 1rem;
+    --main-pad3: 3rem;
+    --borr-sm: 0.3rem;
+    --black: #050505;
+    --white: #f8f8f8;
+    --gray: #121212;
+    --gray1: #121212;
+    --gray2: #525252;
+    --gray3: #a3a3a3;
+    --gray4: #d6d6d6;
+    --gray5: #e6e5e2; 
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1025px;
+    --breakpoint-xl: 1450px;
+}
+
+*, :active, :focus, :hover {
+    outline: 0!important;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+.frame {
+    position: fixed;
+    top: var(--main-pad1);
+    bottom: var(--main-pad1);
+    left: var(--main-pad1);
+    right: var(--main-pad1);
+    pointer-events: none;
+    z-index: 99999;
+    color: var(--white);
+    /* mix-blend-mode: difference; */
+}
+
+.noise {
+    animation: noise 1.2s steps(3) infinite both;
+    background: url("../public/images/ele/download1.png");
+    /* background: url("../public/images/ele/bg.png"); */
+    /* background-repeat: no-repeat; */
+    height: 400%;
+    left: -50%;
+    pointer-events: none;
+    position: fixed;
+    top: -50%;
+    width: 400%;
+    will-change: auto;
+    z-index: 9999;
+    opacity: 1;
+    background-size: 100px;
+    animation: 2s steps(1) infinite noise;
+}
+@keyframes noise {
+    0%, 100% {
+        background-position: 0 0;
+    }
+    
+    10% {
+        background-position: -5% -10%;
+    }
+    20% {
+        background-position: -15% 5%;
+    }
+    30% {
+        background-position: 7% -25%;
+    }
+    40% {
+        background-position: 20% 25%;
+    }
+    50% {
+        background-position: -25% 10%;
+    }
+    60% {
+        background-position: 15% 5%;
+    }
+    70% {
+        background-position: 0% 15%;
+    }
+    80% {
+        background-position: 25% 35%;
+    }
+    90% {
+        background-position: -10% 10%;
+    }
+}
+
+.frame__lineW {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    height: 50%;
+    width: 1px;
+    border-left: 1px solid hsla(0,0%,100%,.2);
+}
+.frame__lineH {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    width: 30%;
+    height: 1px;
+    border-top: 1px solid hsla(0,0%,100%,.2);
+    transform: rotate(90deg);
+    transform-origin: center;
+    transform: translate(0px, 0px);
+}
+
+.frame__cir {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 25vmin;
+    height: 25vmin;
+    border-radius: 50%;
+    border: 1px solid hsla(0,0%,100%,.2);
+    -webkit-clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 50% 0%, 50% 50%);
+    clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 50% 0%, 50% 50%);
+}
+
+.frame__lineWrap {
+    position: fixed;
+    top: var(--main-pad1);
+    bottom: var(--main-pad1);
+    left: var(--main-pad1);
+    right: var(--main-pad1);
+    pointer-events: none;
+    z-index: 100;
+    color: var(--white);
+    mix-blend-mode: difference;
+    transition: .7s ease-in-out;
+}
+.frame__corner {
+    position: absolute;
+    width: var(--main-pad1);
+    height: var(--main-pad1);
+    --border: 3px solid var(--black);
+}
+.frame__corner_tl {
+    top: -2px;
+    left: -2px;
+    border-top: var(--border);
+    border-left: var(--border);
+}
+.frame__corner_tr {
+    top: -2px;
+    right: -2px;
+    border-top: var(--border);
+    border-right: var(--border);
+}
+.frame__corner_bl, .frame__corner_br {
+    bottom: -2px;
+    border-bottom: var(--border);
+}
+.frame__corner_br {
+    right: -2px;
+    border-right: var(--border);
+}
+.frame__line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    /* border: 1px solid hsla(0,0%,100%,.2); */
+}
+.frame__bottom {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.frame__bottom .frame__bottomCenter {
+    white-space: nowrap;
+}
+.frame__bottom>div {
+    width: 30%;
+}
+.frame__corner_bl {
+    left: -2px;
+    border-left: var(--border);
+}
