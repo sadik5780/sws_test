@@ -4,7 +4,6 @@ import Image from "next/image";
 import { links, footerLinks } from "./data";
 import { AnimatePresence, motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
-import { useRouter } from "next/router";
 
 export default function Header() {
   const [isActive, setisActive] = useState(false);
@@ -20,7 +19,6 @@ export default function Header() {
   const isMobile = useMediaQuery({
     query: "(max-width: 768px)",
   });
-  
 
   useEffect(() => {
     isMobile ? setNavigation(false) : setNavigation(true);
@@ -30,7 +28,6 @@ export default function Header() {
   const handleSidebar = () => {
     setSidebar(!sidebar);
   };
-  const router = useRouter();
 
   // Show Hide Header
   useEffect(() => {
@@ -94,11 +91,7 @@ export default function Header() {
                       <Link
                         href={href}
                         onClick={closeMenu}
-                        className={
-                          router.pathname === href
-                            ? "nav-link active"
-                            : "nav-link"
-                        }
+                        className="nav-link"
                       >
                         {title}
                       </Link>
