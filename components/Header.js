@@ -20,6 +20,7 @@ export default function Header() {
   const isMobile = useMediaQuery({
     query: "(max-width: 768px)",
   });
+  
 
   useEffect(() => {
     isMobile ? setNavigation(false) : setNavigation(true);
