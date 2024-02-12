@@ -5,7 +5,10 @@ import "@/styles/custom.css";
 import "@/styles/header.scss";
 import "@/styles/loader.css";
 import "@/styles/responsive.css";
+import "@/styles/testimonial.css";
+import "@/styles/team.scss";
 import "@/styles/frame.css";
+import "@/styles/work.css";
 import Lenis from '@studio-freight/lenis'
 
 

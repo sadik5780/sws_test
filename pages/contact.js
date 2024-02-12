@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import Testimonial from "@/components/Testimonial";
+import Team from "@/components/team";
 
 const contact = () => {
   return (
-    <div>contact</div>
-  )
-}
+    <>
+    <Testimonial/>
+    <Team/>
+    
+    </>
+  );
+};
 
-export default contact
+export default contact;

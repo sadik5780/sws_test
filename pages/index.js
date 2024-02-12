@@ -6,8 +6,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import throttle from 'lodash/throttle';
+import throttle from "lodash/throttle";
 import Link from "next/link";
+import Testimonial from "@/components/Testimonial";
+import Team from "@/components/team";
 
 export default function Home() {
   // OnScroll Animation Initiate
@@ -24,6 +26,15 @@ export default function Home() {
     ".image5",
     ".image6",
     ".image7",
+    ".image8",
+    ".image9",
+    ".image10",
+    ".image11",
+    ".image12",
+    ".image13",
+    ".image14",
+    ".image15",
+    ".image16",
   ];
 
   useEffect(() => {
@@ -36,19 +47,20 @@ export default function Home() {
         gsap.to(el, {
           scrollTrigger: {
             trigger: el,
-            start: "top center", // Adjust as needed
+            start: "top center",
             end: "center bottom",
-            scrub: 0.5, // Adjust the scrub value
-            // markers:true,
+            scrub: 0.5,
             onEnter: () => {
-              // Animation when entering the viewport
+              const groupIndex = Math.floor(index / 4);
+              const direction = index % 4 < 2 ? -1 : 1;
+              const spacing = 50; // Adjust the spacing value as needed
+
               gsap.to(el, {
-                x: index % 2 === 0 ? 380 : -380,
+                x: direction * (350 + spacing),
                 ease: "power1.inOut",
               });
             },
             onLeaveBack: () => {
-              // Animation when leaving the viewport (scrolling back up)
               gsap.to(el, {
                 x: 0,
                 ease: "power1.inOut",
@@ -59,7 +71,6 @@ export default function Home() {
       }
     });
   }, [triggerElements]);
-
 
   return (
     <>
@@ -166,11 +177,16 @@ export default function Home() {
       <section className="work_categories" id="example-anchor">
         <div className="wc-section">
           <div className="wcs_img_wrapper">
-            <img src="../images/artStills/1.jpg" alt="" className="image1" />
+            <img src="../images/artStills/1.jpg" alt="" className="image" />
           </div>
-          <Link href="/work" className="headline">Brands</Link>
           <div className="wcs_img_wrapper">
-            <img src="../images/artStills/2.jpg" alt="" className="image" />
+            <img src="../images/artStills/2.jpg" alt="" className="image1" />
+          </div>
+          <div className="wcs_img_wrapper">
+            <img src="../images/artStills/3.jpg" alt="" className="image2" />
+          </div>
+          <div className="wcs_img_wrapper">
+            <img src="../images/artStills/4.jpg" alt="" className="image3" />
           </div>
         </div>
       </section>
@@ -181,21 +197,16 @@ export default function Home() {
       <section className="work_categories" id="example-anchor">
         <div className="wc-section">
           <div className="wcs_img_wrapper">
-            <img
-              src="../images/artStills/3.jpg"
-              alt=""
-              className="image3"
-              // Add AOS attributes if needed
-            />
+            <img src="../images/artStills/1.jpg" alt="" className="image4" />
           </div>
-          <Link href="/work" className="headline">Editorials</Link>
           <div className="wcs_img_wrapper">
-            <img
-              src="../images/artStills/4.jpg"
-              alt=""
-              className="image2"
-              // Add AOS attributes if needed
-            />
+            <img src="../images/artStills/2.jpg" alt="" className="image5" />
+          </div>
+          <div className="wcs_img_wrapper">
+            <img src="../images/artStills/3.jpg" alt="" className="image6" />
+          </div>
+          <div className="wcs_img_wrapper">
+            <img src="../images/artStills/4.jpg" alt="" className="image7" />
           </div>
         </div>
       </section>
@@ -205,21 +216,16 @@ export default function Home() {
       <section className="work_categories" id="example-anchor">
         <div className="wc-section">
           <div className="wcs_img_wrapper">
-            <img
-              src="../images/artStills/5.jpg"
-              alt=""
-              className="image5"
-              // Add AOS attributes if needed
-            />
+            <img src="../images/artStills/1.jpg" alt="" className="image8" />
           </div>
-          <Link href="/work" className="headline">Promotions/ <br /> Events</Link>
           <div className="wcs_img_wrapper">
-            <img
-              src="../images/artStills/6.jpg"
-              alt=""
-              className="image4"
-              // Add AOS attributes if needed
-            />
+            <img src="../images/artStills/2.jpg" alt="" className="image9" />
+          </div>
+          <div className="wcs_img_wrapper">
+            <img src="../images/artStills/3.jpg" alt="" className="image10" />
+          </div>
+          <div className="wcs_img_wrapper">
+            <img src="../images/artStills/4.jpg" alt="" className="image11" />
           </div>
         </div>
       </section>
@@ -229,30 +235,23 @@ export default function Home() {
       <section className="work_categories" id="example-anchor">
         <div className="wc-section">
           <div className="wcs_img_wrapper">
-            <img
-              src="../images/artStills/7.jpg"
-              alt=""
-              className="image7"
-              // Add AOS attributes if needed
-            />
-          </div>
-          <div className="work_cat_det">
-
-          <Link href="/work" className="headline">Personal</Link>
+            <img src="../images/artStills/1.jpg" alt="" className="image12" />
           </div>
           <div className="wcs_img_wrapper">
-            <img
-              src="../images/artStills/8.jpg"
-              alt=""
-              className="image6"
-              // Add AOS attributes if needed
-            />
+            <img src="../images/artStills/2.jpg" alt="" className="image13" />
+          </div>
+          <div className="wcs_img_wrapper">
+            <img src="../images/artStills/3.jpg" alt="" className="image14" />
+          </div>
+          <div className="wcs_img_wrapper">
+            <img src="../images/artStills/4.jpg" alt="" className="image15" />
           </div>
         </div>
       </section>
       {/* Additional Section 3 End */}
 
-    
+      <Testimonial />
+      <Team />
     </>
   );
 }

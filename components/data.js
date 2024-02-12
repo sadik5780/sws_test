@@ -5,11 +5,11 @@ export const links = [
     },
     {
         title: "Our Work",
-        href: "/work"
+        href: "/work/"
     },
     {
         title: "Reach Us",
-        href: "/contact"
+        href: "/contact/"
     }
 ]
 

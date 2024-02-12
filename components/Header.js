@@ -11,6 +11,7 @@ export default function Header() {
   const [navigation, setNavigation] = useState(true);
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);
+
   const closeMenu = () => {
     setisActive(false);
     setIsMobileNavOpen(false);
@@ -50,7 +51,7 @@ export default function Header() {
     };
   }, [lastScrollTop]);
 
-  // const currentRoute = useLocation().pathname;
+  const currentPath = window.location.pathname;
 
   return (
     <>
@@ -91,7 +92,7 @@ export default function Header() {
                       <Link
                         href={href}
                         onClick={closeMenu}
-                        className="nav-link"
+                        className={`nav-link ${currentPath === href ? 'active' : ''}`}
                       >
                         {title}
                       </Link>

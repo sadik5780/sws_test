@@ -5,7 +5,7 @@
     right: 40px;
     top: 37px;
     z-index: 9999;
-
+//  background: linear-gradient(to bottom,#f0f8f3,#f0f8f300)!important;
     .menu {
         width: 480px;
         height: 650px;
@@ -21,9 +21,9 @@
 
 }
 
-.navbar-brand {
+.navbar-brand, .navbar-brand:hover, .navbar-brand:focus {
     font-family: var(--fontFamily1);
-    color: var(--primaryColor);
+    color: var(--lightGrayColor4);
     font-weight: 800;
 }
 
@@ -100,17 +100,14 @@
 
         a.nav-link {
             font-family: var(--fontFamily4);
-            color: var(--primaryColor);
-            font-size: 1rem;
-            font-weight: 600;
+            color: var(--lightGrayColor4);
+            font-size: .9rem;
         }
-
+        
         a.nav-link.active {
-            color: var(--secondaryColor);
-            // font-family: var(--fontFamily3);
-            font-size: 1rem;
-            // font-weight: 700;
-            text-decoration: underline;
+            color: var(--lightGrayColor4);
+            font-weight: 600;
+            // text-decoration: underline;
         }
     }
 }
@@ -122,8 +119,8 @@
 	top: 0;
 	width: 100%;  
 	transition: all .5s ease; 
-    // background-image: linear-gradient(to bottom,#f0f8f3,#f0f8f300)!important;
-    background-color: #fff !important;
+    // background: linear-gradient(to right, #3a5a40 10%, #334d40) ;
+    background: transparent;
 }
 .site-header.hide {
 	top: -80px;
@@ -134,4 +131,8 @@
 }
 .navbar-toggler{
     border: none;
+}
+
+.navbar-toggler-icon{
+    background-image:url("/icon/ham_menu.svg") !important;
 }
