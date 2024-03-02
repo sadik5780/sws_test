@@ -40,7 +40,7 @@
 
 .noise {
     animation: noise 1.2s steps(3) infinite both;
-    background: url("../public/images/ele/download1.png");
+    background: url("../public/images/ele/download.png");
     /* background: url("../public/images/ele/bg.png"); */
     /* background-repeat: no-repeat; */
     height: 400%;

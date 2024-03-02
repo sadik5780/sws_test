@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import Loader from "./Loader";
 import { useState } from "react";
 import SmoothScrolling from "@/components/SmoothScrolling";
+import CustomCursor from "@/components/CustomCursor";
 
 export default function Layout({ children }) {
   const [showMainContent, setShowMainContent] = useState(false);
@@ -16,6 +17,7 @@ export default function Layout({ children }) {
         <Loader onFinish={handleCountdownFinish} />
       ) : (
         <>
+        <CustomCursor activeElements={['.custom-hover-element']}/>
           <Header />
           <main id="main-layout">
             <div className="frame">

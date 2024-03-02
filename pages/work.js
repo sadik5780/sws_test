@@ -4,42 +4,70 @@ import Testimonial from "@/components/Testimonial";
 const work = () => {
   return (
     <>
-    <div className="workPage">
-      <div class="flexbox">
-        <div class="item">
-          <img src="https://unsplash.it/600/400?random" />
-        </div>
-        <div class="item">
-          <img src="https://unsplash.it/600/600?random" />
-        </div>
-        <div class="item">
-          <img src="https://unsplash.it/720/460?random" />
-        </div>
-        <div class="item">
-          <img src="https://unsplash.it/800/400?random" />
-        </div>
-        <div class="item">
-          <img src="https://unsplash.it/480/700?random" />
-        </div>
-        <div class="item">
-          <img src="https://unsplash.it/680/420?random" />
-        </div>
-        <div class="item">
-          <img src="https://unsplash.it/740/480?random" />
-        </div>
-        <div class="item">
-          <img src="https://unsplash.it/840/440?random" />
-        </div>
-        <div class="item">
-          <img src="https://unsplash.it/640/380?random" />
-        </div>
-        <div class="item">
-          <img src="https://unsplash.it/500/680?random" />
+      <div className="workPage">
+        <div className="masonry">
+          <div className="item">
+            <img src="../images/artStills/1.jpg" />
+          </div>
+          <div className="item">
+            <img src="../images/artStills/2.jpg" />
+          </div>
+          <div className="item">
+            <img src="../images/artStills/3.jpg" />
+          </div>
+          <div className="item">
+            <img src="../images/artStills/4.jpg" />
+          </div>
+          <div className="item">
+            <img src="../images/artStills/5.jpg" />
+          </div>
+          <div className="item">
+            <img src="../images/artStills/6.jpg" />
+          </div>
+          <div className="item">
+            <img src="../images/artStills/7.jpg" />
+          </div>
+          <div className="item">
+            <img src="../images/artStills/8.jpg" />
+          </div>
+          <div className="item">
+            <img src="../images/artStills/9.jpg" />
+          </div>
+          <div className="item">
+            <img src="../images/artStills/10.jpg" />
+          </div>
+          <div className="item">
+            <img src="../images/artStills/11.jpg" />
+          </div>
+          <div className="item">
+            <img src="../images/artStills/12.jpg" />
+          </div>
+          <div className="item">
+            <img src="../images/artStills/12.jpg" />
+          </div>
+          <div className="item">
+            <img src="../images/artStills/12.jpg" />
+          </div>
+          <div className="item">
+            <img src="../images/artStills/12.jpg" />
+          </div>
+          <div className="item">
+            <img src="../images/artStills/12.jpg" />
+          </div>
+          <div className="item">
+            <img src="../images/artStills/12.jpg" />
+          </div>
+          <div className="item">
+            <img src="../images/artStills/12.jpg" />
+          </div>
+          <div className="item">
+            <img src="../images/artStills/12.jpg" />
+          </div>
+         
         </div>
       </div>
-    </div>
 
-    <Testimonial/>
+      <Testimonial />
     </>
   );
 };

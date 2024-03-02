@@ -11,6 +11,7 @@ import Link from "next/link";
 import Testimonial from "@/components/Testimonial";
 import Team from "@/components/team";
 
+
 export default function Home() {
   // OnScroll Animation Initiate
   useEffect(() => {
@@ -89,7 +90,7 @@ export default function Home() {
         <meta name="twitter:label1" content="Est. reading time" />
         <meta name="twitter:data1" content="1 minute" />
       </Head>
-
+      
       {/* Hero Section Start */}
       <div
         className="hero_section hero_bg"
@@ -110,9 +111,9 @@ export default function Home() {
               <p className="middle_small_text">With our team of</p>
 
               <div className="middle_main_text">
-                brand
+                
                 <p className="text-container">
-                  <span>strategists</span>
+                  <span>brand strategists</span>
                   <span>writers</span>
                   <span>cinematographers</span>
                   <span>editors</span>
