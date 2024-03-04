@@ -77,12 +77,6 @@ const work = () => {
               <source src="https://firebasestorage.googleapis.com/v0/b/swsvideodb.appspot.com/o/Ajio%20x%20Attico%20x%20AP.mp4?alt=media&token=6aaeecd4-be6e-4aaf-8b3c-4469a3768bda" />
             </video>
           </div>
-          <div className="item">
-            <audio controls>
-              <source src="horse.ogg" type="audio/ogg" />
-              <source src="../audio/loader.mpeg" type="audio/mpeg" />
-            </audio>
-          </div>
         </div>
       </div>
 
