@@ -125,6 +125,11 @@ p {
   cursor: pointer;
   transition: all .4s;
   border: none;
+  padding-bottom: 10px;
+}
+.back-top-btn:hover {
+  box-shadow: 2px 3px 0px 0px #ffffff21;
+  transform: scale(1.05);
 }
 .back-top-btn:before {
   content: "";
@@ -132,18 +137,18 @@ p {
   position: absolute;
   width: 10px;
   height: 10px;
-  border-top: 3px solid #000;
-  border-right: 3px solid #000;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
   transform: translateY(3px) rotate(-45deg);
 }
 .back-top-btn:after {
   content: "";
   display: block;
   position: absolute;
-  bottom: 7px;
+  bottom: 10px;
   width: 1.5px;
   height: 15px;
-  border-right: 3px solid #000;  
+  border-right: 3px solid #fff;  
 }
 /* .back-top-btn:hover {
   background: var(--secondaryColor);
@@ -289,7 +294,6 @@ p {
 
 .text-container span {
   padding: 5px 10px;
-  margin-left: 10px;
   height: 80px;
   width: fit-content;
   color: var(--bgColorSecondary);
@@ -414,40 +418,61 @@ p {
 .contact-info {
   height: calc(100vh - 20px);
   text-align: center; 
-  padding: 80px;
+  padding: 80px 10px;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content:space-evenly;
   flex-direction: column;
 }
 
-h1 {
-  color: #fff;
+.contact-info h1 {
+  color: #fff !important;
+  /* margin-bottom: 4rem; */
+  font-size: clamp(2rem, 1.3077rem + 3.0769vw, 5rem);
+  font-weight: 700;
+  font-family: var(--fontFamily1);
 }
 
-p {
-  color: #fff;
+.contact-info a {
+  color: #f5f7f5;
+  text-decoration: none;
+  font-size: clamp(1.125rem, 0.9519rem + 0.7692vw, 1.375rem);
+  display: inline-block;
+  transition: all .3s ease-in-out;
+  /* text-transform: uppercase; */
+  margin: 10px 0 0;
+  font-family: var(--fontFamily4);
+  
+}
+.contact-info a:hover {
+  transform: scale(1.1) !important;
+}
+.contact-info p {
+  color: #f5f7f5;
+  font-family: var(--fontFamily1);
+  font-size: 13px;
+  letter-spacing: 2px;
 }
 
+.cont_email a:hover,
+.cont_phone a:hover{
+  transform: scale(1.1);
+}
+.cont_email{
+  margin-bottom: 10px;
+}
+.cont_phone{}
 .social-icons {
   margin-top: 20px;
 }
 
 .social-icons a {
   display: inline-block;
-  margin: 0 10px;
-  color: #333;
-  text-decoration: none;
-  font-size: 20px;
+  transition: all .3s ease-in-out;
+  color: #f5f7f5;
+  text-decoration: none; 
 }
 
-.social-icons a:hover {
-  color: #007bff;
-}
+
 /* Contact Us Styling End */
 
-
-
-
-.custom-hover-element {
-}

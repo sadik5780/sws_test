@@ -17,7 +17,7 @@ export default function Layout({ children }) {
         <Loader onFinish={handleCountdownFinish} />
       ) : (
         <>
-        <CustomCursor activeElements={['.custom-hover-element']}/>
+        {/* <CustomCursor activeElements={['.custom-hover-element']}/> */}
           <Header />
           <main id="main-layout">
             <div className="frame">
