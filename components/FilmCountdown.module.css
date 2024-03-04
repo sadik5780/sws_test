@@ -1,114 +1,70 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
-
- 
-.body {
+.loader {
+  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  font-family: "Roboto", sans-serif;
-  overflow: hidden;
-  box-shadow: inset 0 0 5em 1em #000;
-  background: #000;
+  justify-content: center;
 }
 
-.lines::before {
-  content: "";
-  top: 50%;
-  transform: translatey(-50%);
-  left: 0;
-  height: 1px;
-  background: #4c4c4c;
-  width: 100%;
-  position: absolute;
+.loading {
+  font-size: 8rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle text shadow for a 3D effect */
 }
 
-.lines::after {
-  content: "";
-  top: 0;
-  left: 50%;
-  transform: translatex(-50%);
-  width: 1px;
-  background: #4c4c4c;
-  height: 100vh;
-  position: absolute;
+.loading span {
+  display: inline-block;
+  margin: 0 -0.05em;
+  font-family: var(--fontFamily1);
 }
 
-.screen {
-  clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);
-  background: #fff;
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  animation: spin 1s linear infinite;
+.loading02 span {
+  animation: loading02 2.2s infinite alternate;
 }
 
-@keyframes spin {
+.loading02 span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading02 span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.loading02 span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.loading02 span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+/* .loading02 span:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.loading02 span:nth-child(7) {
+  animation-delay: 1.2s;
+} */
+
+@keyframes loading02 {
   0% {
-    clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);
-  }
-  12.5% {
-    clip-path: polygon(50% 50%, 100% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);
-  }
-  37.5% {
-    clip-path: polygon(
-      50% 50%,
-      100% 100%,
-      100% 100%,
-      100% 100%,
-      0 100%,
-      0 0,
-      50% 0
-    );
-  }
-  62.5% {
-    clip-path: polygon(50% 50%, 0 100%, 0 100%, 0 100%, 0 100%, 0 0, 50% 0);
-  }
-  87.5% {
-    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0, 50% 0);
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1); /* Add scale transformation for a 3D effect */
   }
   100% {
-    clip-path: polygon(50% 50%, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0);
+    filter: blur(5px);
+    opacity: 0.2;
+    transform: scale(1); /* Adjust the scale factor for the desired 3D effect */
   }
 }
 
-.lines {
-  /* box-shadow: inset 0 0 5em 1em #000; */
+
+.interactionPrompt{
   position: absolute;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  left: 0;
-}
-
-.number {
-  font-size: 10rem;
-  position: relative;
-  font-family: var(--fontFamily2);
-}
-
-/* .number::after, */
-.number::before {
-  content: "";
-  border: #fff solid 1px;
-  border-radius: 50%;
-  position: absolute;
-}
-
-.number::before {
-  width: 380px;
-  height: 380px;
+  top: 60%;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.number::after {
-  width: 400px;
-  height: 400px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%);
 }
