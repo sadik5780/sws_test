@@ -1,7 +1,7 @@
 "use client";
 
 import Head from "next/head";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import AOS from "aos";
@@ -10,7 +10,6 @@ import throttle from "lodash/throttle";
 import Link from "next/link";
 import Testimonial from "@/components/Testimonial";
 import Team from "@/components/team";
-
 
 export default function Home() {
   // OnScroll Animation Initiate
@@ -35,8 +34,9 @@ export default function Home() {
     ".image13",
     ".image14",
     ".image15",
-    ".image16",
   ];
+  
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -48,30 +48,48 @@ export default function Home() {
         gsap.to(el, {
           scrollTrigger: {
             trigger: el,
-            start: "top center",
-            end: "center bottom",
+            start: 'top center',
+            end: 'center bottom',
             scrub: 0.5,
             onEnter: () => {
-              const groupIndex = Math.floor(index / 4);
-              const direction = index % 4 < 2 ? -1 : 1;
-              const spacing = 50; // Adjust the spacing value as needed
-
+              const direction = index % 4 < 2 ? 1 : -1;
+              const spacing = index % 2 === 0 ? 400 : 250;
               gsap.to(el, {
-                x: direction * (350 + spacing),
-                ease: "power1.inOut",
+                x: direction * spacing,
+                ease: 'power1.inOut',
               });
             },
             onLeaveBack: () => {
               gsap.to(el, {
                 x: 0,
-                ease: "power1.inOut",
+                ease: 'power1.inOut',
               });
             },
           },
         });
+
+        // Hover animation
+        el.addEventListener('mouseenter', () => {
+          setIsHovered(true);
+          gsap.to(el, {
+            scale: 1.05,
+            duration: 0.3,
+            ease: 'power1.inOut',
+          });
+        });
+
+        el.addEventListener('mouseleave', () => {
+          setIsHovered(false);
+          gsap.to(el, {
+            scale: 1,
+            duration: 0.3,
+            ease: 'power1.inOut',
+          });
+        });
       }
     });
   }, [triggerElements]);
+  
 
   return (
     <>
@@ -90,7 +108,7 @@ export default function Home() {
         <meta name="twitter:label1" content="Est. reading time" />
         <meta name="twitter:data1" content="1 minute" />
       </Head>
-      
+
       {/* Hero Section Start */}
       <div
         className="hero_section hero_bg"
@@ -111,7 +129,6 @@ export default function Home() {
               <p className="middle_small_text">With our team of</p>
 
               <div className="middle_main_text">
-                
                 <p className="text-container">
                   <span>brand strategists</span>
                   <span>writers</span>
@@ -198,16 +215,16 @@ export default function Home() {
       <section className="work_categories" id="example-anchor">
         <div className="wc-section">
           <div className="wcs_img_wrapper">
-            <img src="../images/artStills/1.jpg" alt="" className="image4" />
+            <img src="../images/artStills/5.jpg" alt="" className="image4" />
           </div>
           <div className="wcs_img_wrapper">
-            <img src="../images/artStills/2.jpg" alt="" className="image5" />
+            <img src="../images/artStills/6.jpg" alt="" className="image5" />
           </div>
           <div className="wcs_img_wrapper">
-            <img src="../images/artStills/3.jpg" alt="" className="image6" />
+            <img src="../images/artStills/7.jpg" alt="" className="image6" />
           </div>
           <div className="wcs_img_wrapper">
-            <img src="../images/artStills/4.jpg" alt="" className="image7" />
+            <img src="../images/artStills/8.jpg" alt="" className="image7" />
           </div>
         </div>
       </section>
@@ -217,16 +234,16 @@ export default function Home() {
       <section className="work_categories" id="example-anchor">
         <div className="wc-section">
           <div className="wcs_img_wrapper">
-            <img src="../images/artStills/1.jpg" alt="" className="image8" />
+            <img src="../images/artStills/9.jpg" alt="" className="image8" />
           </div>
           <div className="wcs_img_wrapper">
-            <img src="../images/artStills/2.jpg" alt="" className="image9" />
+            <img src="../images/artStills/10.jpg" alt="" className="image9" />
           </div>
           <div className="wcs_img_wrapper">
-            <img src="../images/artStills/3.jpg" alt="" className="image10" />
+            <img src="../images/artStills/11.jpg" alt="" className="image10" />
           </div>
           <div className="wcs_img_wrapper">
-            <img src="../images/artStills/4.jpg" alt="" className="image11" />
+            <img src="../images/artStills/1.jpg" alt="" className="image11" />
           </div>
         </div>
       </section>
