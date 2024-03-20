@@ -152,7 +152,7 @@ const work = () => {
               <source src="https://firebasestorage.googleapis.com/v0/b/swsvideodb.appspot.com/o/Wave%20Asset.mp4?alt=media&token=1b7e5be0-5889-4af9-8117-c607d85b486e" />
             </video>
           </div>
-          <div className="item">
+          {/* <div className="item">
             <video autoPlay muted loop>
               <source src="" />
             </video>
@@ -171,7 +171,7 @@ const work = () => {
             <video autoPlay muted loop>
               <source src="" />
             </video>
-          </div>
+          </div> */}
         </div>
       </div>
 

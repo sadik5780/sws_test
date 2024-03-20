@@ -62,9 +62,9 @@
   z-index: 2;
   /* box-shadow: 0 10px 10px 0 white; */
 }
-.slider-container{
-	height: 100vh;
-	padding: 13% 0 5%;
+.slider-container {
+  /* height: 100vh; */
+  padding: 13% 0 5%;
 }
 .single-testimonial p {
   color: #fff;
@@ -88,8 +88,7 @@
 .client-info {
   position: relative;
   z-index: 3;
-  padding: 0  50px 30px;
-  
+  padding: 0 50px 30px;
 }
 .client-info a img {
   width: 100%;
@@ -109,7 +108,7 @@
 }
 .client-info {
   display: flex;
-  align-items: center; 
+  align-items: center;
   text-align: left;
   padding-bottom: 50px;
 }
@@ -143,4 +142,10 @@
 }
 .owl-dots button.active {
   width: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .slider-container {
+    height: calc(100svh - 300px);
+  }
 }

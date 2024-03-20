@@ -58,7 +58,7 @@ export default function Header() {
     <>
       <div className={`site-header customnavbar ${isHidden ? "hide" : ""}`}>
         <nav className="navbar navbar-expand-lg">
-          <div className="container">
+          <div className="container-fluid">
             <Link className="navbar-brand" href="/">
               {/* <img
                                 src='/images/redbytes_logo.png'

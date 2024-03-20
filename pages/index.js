@@ -45,45 +45,53 @@ export default function Home() {
       const el = document.querySelector(element);
 
       if (el) {
+        const mediaQuery = window.matchMedia("(max-width: 768px)");
+
         gsap.to(el, {
           scrollTrigger: {
             trigger: el,
-            start: 'top center',
-            end: 'center bottom',
+            start: "top center",
+            end: "center bottom",
             scrub: 0.5,
             onEnter: () => {
-              const direction = index % 4 < 2 ? 1 : -1;
-              const spacing = index % 2 === 0 ? 400 : 250;
+              let direction = 1;
+              let spacing = 400;
+              if (mediaQuery.matches) {
+                direction = index % 2 === 0 ? 1 : -1;
+                spacing = 200;
+              } else {
+                direction = index % 4 < 2 ? 1 : -1;
+                spacing = index % 2 === 0 ? 400 : 250;
+              }
               gsap.to(el, {
                 x: direction * spacing,
-                ease: 'power1.inOut',
+                ease: "power1.inOut",
               });
             },
             onLeaveBack: () => {
               gsap.to(el, {
                 x: 0,
-                ease: 'power1.inOut',
+                ease: "power1.inOut",
               });
             },
           },
         });
 
-        // Hover animation
-        el.addEventListener('mouseenter', () => {
+        el.addEventListener("mouseenter", () => {
           setIsHovered(true);
           gsap.to(el, {
             scale: 1.05,
             duration: 0.3,
-            ease: 'power1.inOut',
+            ease: "power1.inOut",
           });
         });
 
-        el.addEventListener('mouseleave', () => {
+        el.addEventListener("mouseleave", () => {
           setIsHovered(false);
           gsap.to(el, {
             scale: 1,
             duration: 0.3,
-            ease: 'power1.inOut',
+            ease: "power1.inOut",
           });
         });
       }
@@ -240,7 +248,7 @@ export default function Home() {
             <img src="../images/artStills/10.jpg" alt="" className="image9" />
           </div>
           <div className="wcs_img_wrapper">
-            <img src="../images/artStills/11.jpg" alt="" className="image10" />
+            <img src="../images/artStills/12.jpg" alt="" className="image10" />
           </div>
           <div className="wcs_img_wrapper">
             <img src="../images/artStills/1.jpg" alt="" className="image11" />

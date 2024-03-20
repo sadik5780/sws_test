@@ -271,7 +271,7 @@ p {
 
 .hero_section .ht_middle .middle_main_text {
   font-family: var(--fontFamily1);
-  font-size: 4rem;
+  font-size: clamp(1.6rem, 1.5385rem + 2.0513vw, 4rem);
   /* color: var(--lightGrayColor4); */
   color: #fff;
   height: 100px;
@@ -292,9 +292,10 @@ p {
 .text-container span {
   padding: 5px 10px;
   height: 80px;
-  width: fit-content;
-  color: var(--bgColorSecondary);
-  background-color: #fff;
+  /* width: fit-content; */
+  /* color: var(--bgColorSecondary); */
+  color: white;
+  /* background-color: #fff; */
   /* animation: moveUp 10s linear infinite; */
   white-space: nowrap;
   animation: moveUp 10s;
