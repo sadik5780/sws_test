@@ -85,7 +85,7 @@ export default function Header() {
               }`}
               id="navbarSupportedContent"
             >
-              <ul className="custom_nav d-flex justify-content-end navbar-nav ms-auto mb-2 mb-lg-0">
+              <ul className="custom_nav navbar-nav mb-lg-0">
                 {links.map((link, i) => {
                   const { title, href } = link;
                   return (

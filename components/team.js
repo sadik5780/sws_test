@@ -3,6 +3,7 @@ import React from "react";
 const team = () => {
   return (
     <>
+    <div className="team_wrapper">
       <div className="container">
         <div className="row">
           <div className="col-md-3 offset-md-1">
@@ -32,6 +33,7 @@ const team = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

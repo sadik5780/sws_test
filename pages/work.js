@@ -1,9 +1,25 @@
 import React from "react";
 import Testimonial from "@/components/Testimonial";
+import Head from "next/head";
 
 const work = () => {
   return (
     <>
+     <Head>
+        <title>Our Work | Social Whistles Studio</title>
+        <meta name="robots" content="index, follow" />
+        <meta name="description" content="" />
+        <link rel="canonical" href="https://socialwhistles.studio/work" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Our Work | Social Whistles Studio" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="https://socialwhistles.studio/work" />
+        <meta property="og:site_name" content="Social Whistles Studio Portfolio" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:label1" content="Est. reading time" />
+        <meta name="twitter:data1" content="1 minute" />
+      </Head>
       <div className="workPage">
         <div className="masonry">
           <div className="item">

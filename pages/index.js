@@ -35,7 +35,7 @@ export default function Home() {
     ".image14",
     ".image15",
   ];
-  
+
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
@@ -46,6 +46,7 @@ export default function Home() {
 
       if (el) {
         const mediaQuery = window.matchMedia("(max-width: 768px)");
+        const mediaQuery1 = window.matchMedia("(max-width: 580px)");
 
         gsap.to(el, {
           scrollTrigger: {
@@ -57,9 +58,13 @@ export default function Home() {
               let direction = 1;
               let spacing = 400;
               if (mediaQuery.matches) {
-                direction = index % 2 === 0 ? 1 : -1;
-                spacing = 200;
-              } else {
+                direction = index % 4 < 2 ? 1 : -1;
+                spacing = index % 2 === 0 ? 200 : 150;
+              }else if (mediaQuery.matches) {
+                direction = index % 4 < 2 ? 1 : -1;
+                spacing = index % 2 === 0 ? 150 : 120;
+              }
+               else {
                 direction = index % 4 < 2 ? 1 : -1;
                 spacing = index % 2 === 0 ? 400 : 250;
               }
@@ -97,7 +102,6 @@ export default function Home() {
       }
     });
   }, [triggerElements]);
-  
 
   return (
     <>
@@ -160,41 +164,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        {/* <div className="bg_text">
-          <div className="bg-text-container">
-            <div className="item-text">
-              <p>strategists</p>
-              <p>strategists</p>
-              <p>strategists</p>
-              <p>strategists</p>
-            </div>
-            <div className="item-text">
-              <p>writers</p>
-              <p>writers</p>
-              <p>writers</p>
-              <p>writers</p>
-            </div>
-            <div className="item-text">
-              <p>cinematographers</p>
-              <p>cinematographers</p>
-              <p>cinematographers</p>
-              <p>cinematographers</p>
-            </div>
-            <div className="item-text">
-              <p>editors</p>
-              <p>editors</p>
-              <p>editors</p>
-              <p>editors</p>
-            </div>
-            <div className="item-text">
-              <p>3D animators</p>
-              <p>3D animators</p>
-              <p>3D animators</p>
-              <p>3D animators</p>
-            </div>
-          </div>
-        </div> */}
       </div>
       {/* Hero Section End */}
 
@@ -202,18 +171,20 @@ export default function Home() {
 
       <section className="work_categories" id="example-anchor">
         <div className="wc-section">
-          <div className="wcs_img_wrapper">
-            <img src="../images/artStills/1.jpg" alt="" className="image" />
-          </div>
-          <div className="wcs_img_wrapper">
-            <img src="../images/artStills/2.jpg" alt="" className="image1" />
-          </div>
-          <div className="wcs_img_wrapper">
-            <img src="../images/artStills/3.jpg" alt="" className="image2" />
-          </div>
-          <div className="wcs_img_wrapper">
-            <img src="../images/artStills/4.jpg" alt="" className="image3" />
-          </div>
+          <Link href="/work/">
+            <div className="wcs_img_wrapper">
+              <img src="../images/artStills/1.jpg" alt="" className="image" />
+            </div>
+            <div className="wcs_img_wrapper">
+              <img src="../images/artStills/2.jpg" alt="" className="image1" />
+            </div>
+            <div className="wcs_img_wrapper">
+              <img src="../images/artStills/3.jpg" alt="" className="image2" />
+            </div>
+            <div className="wcs_img_wrapper">
+              <img src="../images/artStills/4.jpg" alt="" className="image3" />
+            </div>
+          </Link>
         </div>
       </section>
 
@@ -222,18 +193,20 @@ export default function Home() {
       {/* Additional Section 1 */}
       <section className="work_categories" id="example-anchor">
         <div className="wc-section">
-          <div className="wcs_img_wrapper">
-            <img src="../images/artStills/5.jpg" alt="" className="image4" />
-          </div>
-          <div className="wcs_img_wrapper">
-            <img src="../images/artStills/6.jpg" alt="" className="image5" />
-          </div>
-          <div className="wcs_img_wrapper">
-            <img src="../images/artStills/7.jpg" alt="" className="image6" />
-          </div>
-          <div className="wcs_img_wrapper">
-            <img src="../images/artStills/8.jpg" alt="" className="image7" />
-          </div>
+          <Link href="/work/">
+            <div className="wcs_img_wrapper">
+              <img src="../images/artStills/5.jpg" alt="" className="image4" />
+            </div>
+            <div className="wcs_img_wrapper">
+              <img src="../images/artStills/6.jpg" alt="" className="image5" />
+            </div>
+            <div className="wcs_img_wrapper">
+              <img src="../images/artStills/7.jpg" alt="" className="image6" />
+            </div>
+            <div className="wcs_img_wrapper">
+              <img src="../images/artStills/8.jpg" alt="" className="image7" />
+            </div>
+          </Link>
         </div>
       </section>
       {/* Additional Section 1 End */}
@@ -241,18 +214,24 @@ export default function Home() {
       {/* Additional Section 2 */}
       <section className="work_categories" id="example-anchor">
         <div className="wc-section">
-          <div className="wcs_img_wrapper">
-            <img src="../images/artStills/9.jpg" alt="" className="image8" />
-          </div>
-          <div className="wcs_img_wrapper">
-            <img src="../images/artStills/10.jpg" alt="" className="image9" />
-          </div>
-          <div className="wcs_img_wrapper">
-            <img src="../images/artStills/12.jpg" alt="" className="image10" />
-          </div>
-          <div className="wcs_img_wrapper">
-            <img src="../images/artStills/1.jpg" alt="" className="image11" />
-          </div>
+          <Link href="/work/">
+            <div className="wcs_img_wrapper">
+              <img src="../images/artStills/9.jpg" alt="" className="image8" />
+            </div>
+            <div className="wcs_img_wrapper">
+              <img src="../images/artStills/12.jpg" alt="" className="image9" />
+            </div>
+            <div className="wcs_img_wrapper">
+              <img
+                src="../images/artStills/10.jpg"
+                alt=""
+                className="image10"
+              />
+            </div>
+            <div className="wcs_img_wrapper">
+              <img src="../images/artStills/1.jpg" alt="" className="image11" />
+            </div>
+          </Link>
         </div>
       </section>
       {/* Additional Section 2 End */}
@@ -260,18 +239,20 @@ export default function Home() {
       {/* Additional Section 3 */}
       <section className="work_categories" id="example-anchor">
         <div className="wc-section">
-          <div className="wcs_img_wrapper">
-            <img src="../images/artStills/1.jpg" alt="" className="image12" />
-          </div>
-          <div className="wcs_img_wrapper">
-            <img src="../images/artStills/2.jpg" alt="" className="image13" />
-          </div>
-          <div className="wcs_img_wrapper">
-            <img src="../images/artStills/3.jpg" alt="" className="image14" />
-          </div>
-          <div className="wcs_img_wrapper">
-            <img src="../images/artStills/4.jpg" alt="" className="image15" />
-          </div>
+          <Link href="/work/">
+            <div className="wcs_img_wrapper">
+              <img src="../images/artStills/1.jpg" alt="" className="image12" />
+            </div>
+            <div className="wcs_img_wrapper">
+              <img src="../images/artStills/2.jpg" alt="" className="image13" />
+            </div>
+            <div className="wcs_img_wrapper">
+              <img src="../images/artStills/3.jpg" alt="" className="image14" />
+            </div>
+            <div className="wcs_img_wrapper">
+              <img src="../images/artStills/4.jpg" alt="" className="image15" />
+            </div>
+          </Link>
         </div>
       </section>
       {/* Additional Section 3 End */}

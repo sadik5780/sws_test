@@ -105,8 +105,10 @@
         }
         
         a.nav-link.active {
-            color: var(--lightGrayColor4);
-            font-weight: 600;
+            color: #fff;
+            font-weight: 700;
+            font-style: italic;
+            font-family: var(--fontFamily1);
             // text-decoration: underline;
         }
     }

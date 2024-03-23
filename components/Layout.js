@@ -1,6 +1,6 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import FooterLogo from "./footerlogo";
+// import FooterLogo from "./footerlogo";
 import Loader from "./Loader";
 import { useState } from "react";
 import SmoothScrolling from "@/components/SmoothScrolling";
@@ -63,7 +63,7 @@ export default function Layout({ children }) {
             {children}
           </main>
           <Footer />
-          <FooterLogo />
+          {/* <FooterLogo /> */}
         </>
       )}
     </>
