@@ -9,6 +9,14 @@
   /* Add other font properties like font-weight and font-style if needed */
 }
 
+@font-face {
+  font-family: "Uzi";
+  src: url("https://raw.githubusercontent.com/vickkie/uzitrake/main/fonts/MonumentExtended-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --primaryColor: #3a5a40;
   --secondaryColor: #344e41;
@@ -258,10 +266,16 @@ p {
 }
 .hero_section .ht_middle {
   /* height: 100%; */
+  height: 100%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .hero_section .ht_middle .middle_small_text {
   font-size: 1.8rem;
   font-family: var(--fontFamily4);
+
   color: var(--lightGrayColor4);
   font-weight: 600;
   /* letter-spacing: 2px; */
@@ -269,7 +283,11 @@ p {
 }
 .hero_section .ht_middle .middle_small_text span {
   text-transform: uppercase;
+  font-family: Uzi;
+  letter-spacing: 6px;
+  font-size: 40px;
   /* font-weight: 700; */
+  font-size: clamp(1rem, 0.8077rem + 1.4103vw, 2.5rem);
 }
 
 .hero_section .ht_middle .middle_main_text {
@@ -307,6 +325,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  font-size: clamp(1.8rem, 0.1587rem + 4.2949vw, 5.3125rem);
 }
 
 @keyframes moveUp {
@@ -360,7 +379,7 @@ p {
 .work_categories .wc-section .wcs_img_wrapper {
   width: 380px;
   height: 440px;
-  transition: all 0.3s cubic-bezier(0.1, 0.7, 1.0, 0.1);
+  transition: all 0.3s cubic-bezier(0.1, 0.7, 1, 0.1);
   cursor: pointer;
   /* overflow: hidden; */
 }
@@ -398,7 +417,7 @@ p {
 }
 
 .wcs_img_wrapper img.hovered {
-  z-index: 9999 !important; 
+  z-index: 9999 !important;
 }
 /* Pop up Animation */
 /* Add this to your global CSS or component's CSS file */
@@ -421,9 +440,6 @@ p {
   z-index: 99999;
 } */
 
-
-
-
 /* .work_categories .wc-section .wcs_img_wrapper .image,
 .work_categories .wc-section .wcs_img_wrapper .image1,
 .image2,
@@ -440,7 +456,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px; 
+  border-radius: 20px;
   position: relative;
 }
 

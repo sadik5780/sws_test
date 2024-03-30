@@ -119,6 +119,7 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:label1" content="Est. reading time" />
         <meta name="twitter:data1" content="1 minute" />
+        <link rel="icon" href="#" />
       </Head>
 
       {/* Hero Section Start */}

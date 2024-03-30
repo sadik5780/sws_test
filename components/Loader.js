@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import styles from "./FilmCountdown.module.css";
 
 const Loader = ({ onFinish }) => {
@@ -6,7 +7,7 @@ const Loader = ({ onFinish }) => {
   const [musicPlaying, setMusicPlaying] = useState(false);
 
   useEffect(() => {
-    const audio = new Audio('../audio/loader.mpeg'); // Adjust the path to your MP3 file
+    const audio = new Audio('../audio/loader.mpeg');
 
     const handleEnded = () => {
       setMusicPlaying(false);
@@ -20,7 +21,7 @@ const Loader = ({ onFinish }) => {
       setMusicPlaying(true);
       setTimeout(() => {
         fadeOut();
-      }, 5000); // Start fading after 3 seconds
+      }, 6000); // Fade out after 3 seconds
     };
 
     const fadeOut = () => {
@@ -31,13 +32,12 @@ const Loader = ({ onFinish }) => {
         } else {
           clearInterval(fadeOutInterval);
           audio.pause();
-          audio.volume = initialVolume; // Reset volume to initial level
+          audio.volume = initialVolume;
           handleEnded();
         }
-      }, 200); // Adjust the interval as needed
+      }, 200);
     };
 
-    // Display interaction prompt and start playing music after user interaction
     const handleClick = () => {
       setInteractionPrompt(false);
       playAudio();
@@ -50,10 +50,20 @@ const Loader = ({ onFinish }) => {
     };
   }, [onFinish]);
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (!musicPlaying && onFinish) {
+        onFinish();
+      }
+    }, 6000); // Stop loader after 6 seconds
+
+    return () => clearTimeout(timeout);
+  }, [musicPlaying, onFinish]);
+
   return (
     <div className={styles.loader}>
       {interactionPrompt && <div className={styles.interactionPrompt}>Click to interact</div>}
-      {!interactionPrompt && musicPlaying && (
+      {!interactionPrompt && (
         <div className={`${styles.loading} ${styles.loading02}`}>
           <span>S</span>
           <span>&nbsp;</span>
@@ -64,6 +74,10 @@ const Loader = ({ onFinish }) => {
       )}
     </div>
   );
+};
+
+Loader.propTypes = {
+  onFinish: PropTypes.func.isRequired,
 };
 
 export default Loader;

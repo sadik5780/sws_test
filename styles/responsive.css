@@ -300,7 +300,7 @@
     height: calc(80svh - 160px);
   }
   .text-container {
-    width: 100vw;
+    width: 90vw;
   }
   .hero_section .ht_middle .middle_main_text {
     /* font-size: 2rem; */
