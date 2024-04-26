@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Testimonial from "@/components/Testimonial";
 import Head from "next/head";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const work = () => {
+
+  useEffect(() => {
+    AOS.init();
+  
+    const masonry = document.querySelector('.masonry');
+    const items = document.querySelectorAll('.item');
+  
+    const updateMasonry = () => {
+      const columnCount = 3; // Set to 3 columns
+      masonry.style.gridTemplateColumns = `repeat(${columnCount}, 1fr)`;
+    };
+  
+    updateMasonry();
+  
+    return () => {};
+  }, []);
+  
+  
   return (
     <>
      <Head>
@@ -22,7 +42,7 @@ const work = () => {
       </Head>
       <div className="workPage">
         <div className="masonry">
-          <div className="item">
+          <div className="item" >
             <img src="../images/artStills/1.jpg" />
           </div>
           <div className="item">
@@ -197,3 +217,8 @@ const work = () => {
 };
 
 export default work;
+
+
+
+
+

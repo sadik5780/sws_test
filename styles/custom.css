@@ -180,7 +180,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 6rem 0 4rem;
+  /* padding: 6rem 0 4rem; */
 }
 
 .hero_bg {
@@ -283,10 +283,6 @@ p {
 }
 .hero_section .ht_middle .middle_small_text span {
   text-transform: uppercase;
-  font-family: Uzi;
-  letter-spacing: 6px;
-  font-size: 40px;
-  /* font-weight: 700; */
   font-size: clamp(1rem, 0.8077rem + 1.4103vw, 2.5rem);
 }
 
@@ -325,7 +321,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  font-size: clamp(1.8rem, 0.1587rem + 4.2949vw, 5.3125rem);
+  font-size: clamp(2rem, 0.8462rem + 5.1282vw, 7rem);
 }
 
 @keyframes moveUp {
@@ -534,3 +530,21 @@ p {
 }
 
 /* Contact Us Styling End */
+
+.brandSlider h3 {
+  color: #fff;
+  font-family: var(--fontFamily1);
+  font-size: 20px;
+}
+.brandSlider  .slick-slide{
+  width: unset !important;
+  padding: 0 20px;
+}
+.slide_img {
+  width: 100px !important;
+  height: 100px !important;
+}
+.slide_img img {
+  width: 100%;
+  height: 100%;
+}

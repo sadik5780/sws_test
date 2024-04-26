@@ -11,7 +11,7 @@
   .hero_section .hero_text {
     padding: 0 40px;
   }
-  .navbar-collapse{
+  .navbar-collapse {
     flex-grow: 0;
     flex-basis: auto;
     display: block;
@@ -68,7 +68,7 @@
 }
 @media screen and (max-width: 580px) {
   .hero_section {
-    height: 80svh;
+    height: 100svh !important;
   }
   .hero_section .hero_text {
     height: calc(80svh - 160px);
@@ -179,16 +179,23 @@
     left: 19% !important;
     width: 62% !important;
   }
+  .slider-container {
+    height: calc(100svh - 440px);
+}
 }
 @media screen and (max-width: 480px) {
   .frame__lineW {
     top: 30% !important;
     height: 40% !important;
   }
+  .slider-container {
+    height: calc(100svh - 440px);
+}
 }
 @media screen and (max-width: 420px) {
   .hero_section {
-    height: 80svh;
+    height: 100svh !important;
+    padding: 0 !important;
   }
   .hero_section .hero_text {
     height: calc(80svh - 160px);
@@ -221,7 +228,7 @@
     height: 50px;
   }
   .hero_section .hero_text {
-    padding: 0 15px;
+    padding: 0;
   }
   .navbar {
     padding: 30px 20px 0;
@@ -291,11 +298,27 @@
     top: 34% !important;
     height: 31% !important;
   }
+  .slider-container {
+    height: calc(100svh - 440px);
+}
 }
 @media screen and (max-width: 360px) {
   .hero_section {
-    height: 80svh;
+    height: 100svh !important;
+    padding: 0 !important;
   }
+  .slider-container {
+    height: calc(100svh - 440px);
+}
+  .work_categories {
+    height: 76vh;
+    .wc-section {
+      height: 100%;
+    }
+  }
+  .team_wrapper {
+    padding: 20% 0 0%;
+}
   .hero_section .hero_text {
     height: calc(80svh - 160px);
   }
@@ -327,7 +350,7 @@
     height: 50px;
   }
   .hero_section .hero_text {
-    padding: 0 15px;
+    padding: 0;
   }
   .navbar {
     padding: 30px 20px 0;
@@ -396,5 +419,8 @@
     top: 38% !important;
     left: 50%;
     height: 24% !important;
+  }
+  .hero_section .ht_middle {
+    height: 40%;
   }
 }

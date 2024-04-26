@@ -1,37 +1,80 @@
-import React, { useEffect, useState } from "react";
-import styles from "./LogoSlider.module.css";
+import React from "react";
+import Slider from "react-slick";
 
 const LogoSlider = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % 10); // Assuming 10 slides in total
-    }, 3000); // Change slide every 3 seconds
-
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, []);
-
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 3,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 360,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
-    <div className={styles.slider}>
-      <div
-        className={styles["slide-track"]}
-        style={{
-          transform: `translateX(-${currentSlide * 100}%)`, // Assuming each slide takes 100% width
-          transition: "transform 0.5s ease", // Smooth sliding transition
-        }}
-      >
-        <div className={`${styles.slide}`}>1</div>
-        <div className={`${styles.slide}`}>2</div>
-        <div className={`${styles.slide}`}>3</div>
-        <div className={`${styles.slide}`}>4</div>
-        <div className={`${styles.slide}`}>5</div>
-        <div className={`${styles.slide}`}>6</div>
-        <div className={`${styles.slide}`}>7</div>
-        <div className={`${styles.slide}`}>8</div>
-        <div className={`${styles.slide}`}>9</div>
-        <div className={`${styles.slide}`}>0</div>
-      </div>
+    <div className="brandSlider">
+      <Slider {...settings}>
+        <div>
+          <h3>Brand Name 1</h3>
+        </div>
+        <div>
+          <h3>Brand Name 2</h3>
+        </div>
+        <div>
+          <h3>Brand Name 3</h3>
+        </div>
+        <div>
+          <h3>Brand Name 4</h3>
+        </div>
+        <div>
+          <h3>Brand Name 5</h3>
+        </div>
+        <div>
+          <h3>Brand Name 6</h3>
+        </div>
+        <div>
+          <h3>Brand Name 7</h3>
+        </div>
+        <div>
+          <h3>Brand Name 8</h3>
+        </div>
+        <div>
+          <h3>Brand Name 9</h3>
+        </div>
+      </Slider>
     </div>
   );
 };

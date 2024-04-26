@@ -21,7 +21,7 @@ const Loader = ({ onFinish }) => {
       setMusicPlaying(true);
       setTimeout(() => {
         fadeOut();
-      }, 6000); // Fade out after 3 seconds
+      }, 0); // Fade out after 6 seconds
     };
 
     const fadeOut = () => {
@@ -50,26 +50,17 @@ const Loader = ({ onFinish }) => {
     };
   }, [onFinish]);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      if (!musicPlaying && onFinish) {
-        onFinish();
-      }
-    }, 6000); // Stop loader after 6 seconds
-
-    return () => clearTimeout(timeout);
-  }, [musicPlaying, onFinish]);
-
   return (
     <div className={styles.loader}>
       {interactionPrompt && <div className={styles.interactionPrompt}>Click to interact</div>}
-      {!interactionPrompt && (
+      {!interactionPrompt && musicPlaying && (
         <div className={`${styles.loading} ${styles.loading02}`}>
           <span>S</span>
           <span>&nbsp;</span>
           <span>W</span>
           <span>&nbsp;</span>
           <span>S</span>
+          <div className={styles.loadingBar}></div>
         </div>
       )}
     </div>

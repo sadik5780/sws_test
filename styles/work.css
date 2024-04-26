@@ -3,7 +3,7 @@ body p {
 }
 
 .workPage {
-  padding-top: 100px;
+  padding: 100px 0 100px;
 }
 
 .masonry {
@@ -38,6 +38,7 @@ body p {
 .item video {
   max-width: 100%;
   object-fit: cover !important;
+  margin-bottom: -6px;
 }
 
 @media only screen and (max-width: 320px) {
