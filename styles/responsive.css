@@ -181,7 +181,7 @@
   }
   .slider-container {
     height: calc(100svh - 440px);
-}
+  }
 }
 @media screen and (max-width: 480px) {
   .frame__lineW {
@@ -190,7 +190,7 @@
   }
   .slider-container {
     height: calc(100svh - 440px);
-}
+  }
 }
 @media screen and (max-width: 420px) {
   .hero_section {
@@ -300,7 +300,7 @@
   }
   .slider-container {
     height: calc(100svh - 440px);
-}
+  }
 }
 @media screen and (max-width: 360px) {
   .hero_section {
@@ -309,7 +309,7 @@
   }
   .slider-container {
     height: calc(100svh - 440px);
-}
+  }
   .work_categories {
     height: 76vh;
     .wc-section {
@@ -318,7 +318,7 @@
   }
   .team_wrapper {
     padding: 20% 0 0%;
-}
+  }
   .hero_section .hero_text {
     height: calc(80svh - 160px);
   }
@@ -422,5 +422,8 @@
   }
   .hero_section .ht_middle {
     height: 40%;
+  }
+  .work_categories .wc-section {
+    height: calc(100vh - 266px);
   }
 }
