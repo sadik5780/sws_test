@@ -4,7 +4,9 @@
 /node_modules
 /.pnp
 .pnp.js
-
+/video_assets
+/video_assets_compressed
+compress-all-videos.bat
 # testing
 /coverage
 
@@ -30,3 +32,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# Untouched full-resolution source images (see README). Not served, not shipped.
+/assets/originals/
