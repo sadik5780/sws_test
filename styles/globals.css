@@ -765,8 +765,8 @@ body.rolling .focus-pull {
    children are all absolutely positioned, so it has no intrinsic size of its
    own) collapsed to nothing, and these spreads rendered blank. Fixed height on
    the figure, width derived from the clip's ratio — same pattern as the reel. */
-.ed-spread__figure { position: relative; height: min(74vh, 620px); background: var(--void-2); }
-.ed-spread__figure .cine-video { width: auto; height: 100%; }
+.ed-spread__figure { position: relative; height: min(74vh, 620px); max-width: 100%; background: var(--void-2); }
+.ed-spread__figure .cine-video { width: auto; height: 100%; max-width: 100%; }
 .ed-spread__title { font-family: var(--font-display); font-size: var(--t-display); line-height: 1; }
 
 .people { padding: 4vh var(--pad-x) var(--gap-section); }
